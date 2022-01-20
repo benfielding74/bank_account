@@ -6,8 +6,10 @@ class BankAccount
     @balance = balance
   end
 
-  def deposit_money(deposit)
-    @balance += deposit
+  def deposit_money
+    puts "How much would you like to deposit?"
+    deposit = gets.chomp
+    @balance += deposit.to_i
     "You have deposited £#{deposit}"
   end
 
@@ -22,3 +24,5 @@ class BankAccount
   end
 
 end
+
+
